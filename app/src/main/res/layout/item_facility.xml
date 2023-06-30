@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="facility"
+            type="com.radiusagent.facilitypicker.data.local.models.Facility" />
+    </data>
+
+    <!-- Your layout content for the facility item -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Facility name -->
+        <TextView
+            android:id="@+id/tvFacilityName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{facility.name}" />
+
+        <!-- Facility icon -->
+        <ImageView
+            android:id="@+id/ivFacilityIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            tools:listitem="@layout/item_option" />
+    </LinearLayout>
+</layout>

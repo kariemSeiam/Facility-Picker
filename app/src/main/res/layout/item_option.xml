@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="option"
+            type="com.radiusagent.facilitypicker.data.local.models.Option" />
+    </data>
+
+    <!-- Your item view layout code goes here -->
+    <!-- Customize it based on your requirements -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Example: Displaying the name of the option -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{option.name}" />
+
+        <!-- Example: Displaying the icon of the option -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@{option.icon}" />
+
+    </LinearLayout>
+</layout>
